@@ -4,7 +4,7 @@
 
 Submitted by: **Balachandra Maddina**
 
-Time spent: **8** hours spent in total
+Time spent: **10.0** hours spent in total
 
 ## User Stories
 
