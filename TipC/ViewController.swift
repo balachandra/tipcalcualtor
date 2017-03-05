@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var splitControl: UISegmentedControl!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var splitLabel: UILabel!
+    @IBOutlet var body: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +29,17 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
+        self.body.alpha = 0.75
+        UIView.animate(withDuration: 1.0, delay: 0.0, animations: {
+            self.body.alpha = 1
+        }, completion: nil)
         
         let defaults = Foundation.UserDefaults.standard
         let defaultTip = defaults.integer(forKey: "defaultTip")
         tipControl.selectedSegmentIndex = defaultTip
         onBillAmountChanged(self)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -187,6 +187,7 @@
                     <connections>
                         <outlet property="billField" destination="8fm-ln-yoa" id="UXk-oJ-wus"/>
                         <outlet property="billLabel" destination="w8p-rU-Cbo" id="Lv1-lT-yG9"/>
+                        <outlet property="body" destination="8bC-Xf-vdC" id="XJF-NP-Szy"/>
                         <outlet property="numPeopleField" destination="pMZ-Nc-8So" id="MqV-74-jmG"/>
                         <outlet property="splitControl" destination="FHz-RS-Xs2" id="gOA-qD-eNs"/>
                         <outlet property="splitLabel" destination="3Kv-cU-ult" id="0dK-LF-SAQ"/>
@@ -313,6 +314,7 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="body" destination="W0G-29-ZZz" id="MVy-Bw-Jny"/>
                         <outlet property="defaultTipControl" destination="lO1-mR-B4z" id="Dlw-iF-mgS"/>
                     </connections>
                 </viewController>

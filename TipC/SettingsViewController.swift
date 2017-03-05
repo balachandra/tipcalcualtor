@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
+    @IBOutlet var body: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,13 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        self.body.alpha = 0.75
+        UIView.animate(withDuration: 1.0, delay: 0.0, animations: {
+            self.body.alpha = 1
+        }, completion: nil)
+    }
 
     @IBAction func onChangeDefaultTip(_ sender: AnyObject){
         let defaults = Foundation.UserDefaults.standard
