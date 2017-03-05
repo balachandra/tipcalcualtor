@@ -23,8 +23,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.billField.becomeFirstResponder()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        
+        let defaults = Foundation.UserDefaults.standard
+        let defaultTip = defaults.integer(forKey: "defaultTip")
+        tipControl.selectedSegmentIndex = defaultTip
+        onBillAmountChanged(self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
